@@ -1,0 +1,89 @@
+* {
+    margin: 0; /*Eliminamos el margen predeterminado*/
+    padding: 0;/*Eliminamos el relleno predeterminado*/
+    box-sizing: border-box; /* Añadido para incluir padding y border en el tamaño total */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed; /* Fijar al fondo de la pantalla */
+    padding: 20px; /*Definimos el relleno*/
+    display: flex; /* Flexbox para alinear los elementos en fila */
+    justify-content: space-between;
+    align-items: center; /* Añadido para centrar verticalmente el contenido */
+    background-color: grey;
+    width: 100%; 
+    top: 0; /* Asegura que el header se quede en la parte superior */
+    z-index: 1000; /* Asegura que el header esté encima de otros elementos */
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Asegura que no haya margen por defecto en la lista */
+    padding: 0; /* Asegura que no haya padding por defecto en la lista */
+}
+
+nav ul li {
+    margin-left: 20px; /*Margen izquierdo */
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold; /*negrita*/
+    font-size: 20px;
+}
+
+nav ul li a:hover { /*Cuando paso el mouse por arriba*/
+    font-size: 22px;
+    color: white;
+}
+
+main {
+    background-color: rgb(110, 109, 109);
+    display: flex;
+    padding: 20px;
+    gap: 20px; /*Espacio entre elementos*/
+    margin-top: 80px; /* Añadido para asegurar que el contenido no quede oculto detrás del header fijo */
+}
+
+.section-container {
+    display: flex;
+    flex-direction: column; /* Los elementos hijos se ponene de forma vertical*/
+    width: 80%;
+}
+
+section {
+    flex: 2; /*Ocupa 2 espacios*/
+    padding: 20px;
+    border: 1px solid white;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+aside {
+    flex: 1; /*Ocupa 1 espacios*/
+    padding: 20px;
+    border: 1px solid white;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center; /*Centrar el texto de la etiqueta*/
+    padding: 20px 0 20px 0;/*relleno arriba derecha abajo izquierda*/
+    position: fixed; /* Cambiado para que el footer esté fijo en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
